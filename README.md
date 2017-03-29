@@ -8,21 +8,26 @@ node 全栈开发从入门到放弃系列文章
 
 2. ES6 新特性高阶 [todo]  
 
-3. MDN Javascript [todo]  
+3. Javascript忍者秘籍 [todo]
 
-4. Javascript忍者秘籍 [todo]  
+4. 理解系列(原创，通过简单例子理解JS难点)
+    1. [理解 apply 和 call](https://github.com/daviscai/get-node/blob/master/understand/js_apply_call.md)
+    2. [理解 Callback and Promise and Async/await](https://github.com/daviscai/get-node/blob/master/understand/js_callback_promise_async.md)
+    3. [理解this作用域](https://github.com/daviscai/get-node/blob/master/understand/js_this.md)  
 
 5. Javascript 数据结构与算法 [todo]   
 
 6. 你不知道的JavaScript (上，中) [todo]  
 
-### Node.js 与开发环境
+7. JavaScript语言精粹 [todo]
 
-1. Node.js Api 手册
-2. 创建第一个Node应用
-3. 自动化构建
-4. 创建第一个node框架
-5. node性能调优
+### Node.js
+
+1. V8 GC
+2. V8 性能调优
+3. 开发自动化构建
+4. node开发框架
+5. node文件系统
 
 ### 系统架构与监控
 1. 分布式缓存实现
