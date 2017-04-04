@@ -1,5 +1,5 @@
 title: ECMAscript2015 介绍
-speaker: 文雄
+speaker: @蚊子
 url:
 transition: slide3
 files:
@@ -1800,6 +1800,6 @@ console.log(b); // 20
 
 [slide]
 ## 谢谢
-#### 欢迎关注个人[blog](http://wenzzz.com), [github](https://github.com/daviscai)
+#### 欢迎关注 [github](https://github.com/daviscai)
 ----
 ###### 本ppt部分内容来自阮一峰老师的[《ES6标准入门》](http://es6.ruanyifeng.com/)一书

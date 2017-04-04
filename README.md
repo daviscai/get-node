@@ -4,7 +4,7 @@ node 全栈开发从入门到放弃系列文章
 ### Javascript 语言基础
 建议看 PPT，文档带有部分ppt特效语法，可能会影响阅读，ppt特效由 [nodeppt](https://github.com/daviscai/nodePPT) 提供支持。
 
-1. ES6 新特性基础：  [PPT(aliyun 方便国内访问)](http://ppt.wenzzz.com/node/es6_base/) ， [PPT(github)](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
+1. ES6 新特性基础： [PPT(github)](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
 
 2. ES6 新特性高阶 [todo]  
 
@@ -18,7 +18,7 @@ node 全栈开发从入门到放弃系列文章
 
 7. JavaScript设计模式
 
-8. 理解系列(原创，通过简单例子理解JS难点)
+8. 理解系列(原创，通过简单例子理解JS难点和重点)
     1. [理解 apply 和 call](https://github.com/daviscai/get-node/blob/master/understand/js_apply_call.md)
     2. [理解 Callback and Promise and Async/await](https://github.com/daviscai/get-node/blob/master/understand/js_callback_promise_async.md)
     3. [理解this作用域](https://github.com/daviscai/get-node/blob/master/understand/js_this.md)  
@@ -27,6 +27,10 @@ node 全栈开发从入门到放弃系列文章
     6. [理解原型和原型链](https://github.com/daviscai/get-node/blob/master/understand/js_prototype.md)
     7. [理解柯里化](https://github.com/daviscai/get-node/blob/master/understand/js_curry.md)
     8. [理解浅拷贝和深拷贝](https://github.com/daviscai/get-node/blob/master/understand/js_deepcopy.md)
+    9. [理解事件冒泡和委托]
+    10. [理解定时器]
+    11. [理解正则表达式]
+    12. [理解即时函数]
 
 
 ### Node.js
@@ -49,7 +53,7 @@ node 全栈开发从入门到放弃系列文章
 ### 表现层前端
 1. view层技术， react, vue2, antd, vux, weex
 2. css3 & 栅格系统
-3. html5 & 动画
+3. html5 & 动画 & webGL
 4. 移动端混合app技术
 
 ### 行业应用和实践

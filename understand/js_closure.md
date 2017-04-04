@@ -116,10 +116,16 @@ ronin
 ```
 
 通过输出结果，我们知道2个特性：
-1. 参数也在闭包内，innerFunction的参数一样可以被访问到；
+1. 外部作用域下的函数实参也在闭包内，innerFunction的参数一样可以被访问到；
 2. 即使在闭包创建后定义的变量，闭包内也能访问到，可以访问到tooLate变量。
 
+#### 闭包就像一个气泡一样包含着里面的函数和变量
 
+对于闭包的理解，我们可以把它想象成是一个“安全气泡”，里面包含着闭包创建时的函数和变量，这是对闭包最形象的比喻。
+
+
+
+#### 释放闭包占用的内存空间
 闭包很难引起注意，也没有办法检测到闭包这个东西，但闭包是会占用内存的，下面2种方式可以释放内存：
 1. GC垃圾回收机制
 2. 闭包作用域里的所有引用都消失了
@@ -148,7 +154,7 @@ var ninja = new Ninja();
 ninja.slice();
 ```
 
-函数内部的变量，只允许 Ninja 的内部方法来访问，这种方式我们还是感觉不到闭包的作用，因为面向对象的编程经验告诉我们这样很正常，但对于Javascript来讲，确实是闭包的作用。
+函数内部的变量，只允许 Ninja 的内部方法来访问，这种方式我们还是感觉不到闭包的作用，因为面向对象的编程经验告诉我们这样很正常，但对于Javascript来讲，确实是因为闭包的作用。
 
 #### Callback回调
 
@@ -168,17 +174,79 @@ jQuery('#testButton').click(function(){
     })
 }
 ```
+为什么ajax异步回调的匿名函数可以访问到外部变量$elem？ 因为闭包！
+
 
 #### 定时器 setTimeout, setInterval
+
+假设我们要做一个动画，每隔1秒执行一个操作，大概代码如下：
+```
+function animate(){
+	var t = 0;
+	var time = setInterval(function(){
+		var y=0;
+		t++
+		y++
+		console.log('outside:'+t);
+		console.log('inside:'+ y);
+	},1000);
+}
+animate();
+```
+
+输出：
+```
+outside:1
+inside:1
+outside:2
+inside:1
+outside:3
+inside:1
+outside:4
+```
+setInterval里定义了一个匿名函数，每隔1秒执行一次这个函数，每次执行都会创建一个闭包，变量t是外部变量，对所有闭包可见，所以会累加，而匿名函数内部变量y，每个闭包都只能自己能访问到变量y，所以，都输出1。
+
 
 
 #### 函数重载
 
+闭包是实现函数重载最关键的一步，例子来自另一篇[理解 apply 和 call](https://github.com/daviscai/get-node/blob/master/understand/js_apply_call.md)
 
-#### 即使函数
+下面我们来实现一个需求，对一个已知的对象方法进行扩展，在执行该方法前输出 do brefor, 执行该方法后输出 do after，这种场景在一些MVC框架中非常常见。
 
+```
+var m = {
+  do:function(a){
+    console.log('do something: '+a);
+  }
+}
 
-#### 类库封装
+function abc(){
+    var fn = m['do']
+
+    m['do'] = function(){  //此处不能用箭头函数，因为箭头函数没有arguments参数
+		console.log('do brefor');
+
+        fn.apply(this, arguments);             // JS的任何一个方法都会有一个隐形参数 arguments，类似数组
+        //fn.call(this, [...arguments]);       // call接收的是参数列表形式，需要用扩展运算符转换成参数列表
+        //let f = fn.bind(this, ...arguments); // bind不会马上执行函数，而是返回一个新函数
+        //f();
+
+		console.log('do after');
+    }
+}
+abc();
+m.do('kkkk');
+```
+
+输出：  
+```
+do brefor
+do something: kkkk
+do after
+```
+
+函数abc()里定义了一个匿名函数，赋值给 m['do']，在匿名函数里面可以访问到外部变量 fn，通过apply 或者 call把上下文带到闭包中，从而实现了对原有函数的重载。
 
 
 ### 总结
