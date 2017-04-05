@@ -4,19 +4,19 @@ node 全栈开发从入门到放弃系列文章
 ### Javascript 语言基础
 建议看 PPT，文档带有部分ppt特效语法，可能会影响阅读，ppt特效由 [nodeppt](https://github.com/daviscai/nodePPT) 提供支持。
 
-1. ES6 新特性基础： [PPT(github)](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
+1. ES6 新特性基础： [PPT](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
 
 2. ES6 新特性高阶 [todo]  
 
-3. Javascript忍者秘籍 [todo]
+3. Javascript 数据结构与算法 [todo]    
 
-4. Javascript 数据结构与算法 [todo]    
+4. JavaScript设计模式
 
 5. 你不知道的JavaScript (上，中) [todo]  
 
 6. JavaScript语言精粹 [todo]
 
-7. JavaScript设计模式
+7.  Javascript忍者秘籍 [todo]
 
 8. 理解系列(原创，通过简单例子理解JS难点和重点)
     1. [理解 apply 和 call](https://github.com/daviscai/get-node/blob/master/understand/js_apply_call.md)
@@ -49,6 +49,7 @@ node 全栈开发从入门到放弃系列文章
     3.3 MySQL内核:InnoDB存储引擎  
     3.4 千万级、亿级数据索引优化实践
 4. node应用可视化监控
+5. docker容器 & 微服务化
 
 ### 表现层前端
 1. view层技术， react, vue2, antd, vux, weex
@@ -67,5 +68,10 @@ node 全栈开发从入门到放弃系列文章
 8. PC桌面客户端开发
 9. 物联网应用开发
 
+
+### 未来
+1. node.js与物联网/智能家居
+2. node.js与车联网
+3. node.js与AI
 
 `Node.js可以开发桌面客户端程序，web端网站，移动端APP，H5游戏(页游和手游)，聊天工具和智能家居系统，可以说是一种全端和全栈技术。`
