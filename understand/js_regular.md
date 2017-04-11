@@ -14,3 +14,4 @@
 ### 参考
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions
 http://imweb.io/topic/56e804ef1a5f05dc50643106
+http://javascript.ruanyifeng.com/stdlib/regexp.html#toc18
