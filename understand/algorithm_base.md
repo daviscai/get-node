@@ -643,11 +643,14 @@ console.log(hash.get('abc'));  // 输出 undefined
 ##### 哈希冲突
 
 有些时候，一些key会有相同的哈希值，就是不同的key, 通过上面的hashCode函数返回相同的数值，这就会导致不同的key指向了相同的value，解决冲突的方法有：
-1. 分离链接  
-2. 线性探查  
-3. 双散列法  
+1. 分离链接：对存在冲突的值放到链表里，这样不同的key指向同一个链表，而链表里保存key对应的值，PHP Array采用这种方式，如下图  
+![](../imgs/hash.png)  
+2. 线性探查：存在冲突时候，index++, 一直到不冲突为止。
 
-减少冲突最好是找到一个更佳的哈希算法，上面3种解决冲突的方法尽管能避免冲突，但是也增加了哈希查找的复杂度，下面是一个更好的哈希算法：
+上面3种解决冲突的方法尽管能避免冲突，但是也增加了哈希查找的复杂度，也存在被利用导致拒绝服务的风险，因为经过特殊构造的键值, 使得每一次插入都会造成Hash冲突, 从而使得Hash表退化成链表，可以看看 [防御hash算法冲突导致拒绝服务器](http://www.cnblogs.com/fengmk2/archive/2012/01/01/2309261.html)
+
+
+下面是一个更好的哈希算法：
 
 ```
 function DJBHashCoed(key){
@@ -660,4 +663,4 @@ function DJBHashCoed(key){
 ```
 
 延伸阅读：  
-https://www.byvoid.com/zhs/blog/string-hash-compare
+https://www.byvoid.com/zhs/blog/string-hash-compare  
