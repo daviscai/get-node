@@ -33,7 +33,7 @@ node 全栈开发从入门到放弃系列文章
     12. [理解即时函数](https://github.com/daviscai/get-node/blob/master/understand/js_iife.md)
     13. [理解算法与数据结构 - 栈，队列，链表，哈希散列](https://github.com/daviscai/get-node/blob/master/understand/algorithm_base.md)
     13. [理解算法与数据结构 - 二叉搜索树，自平衡二叉树，红黑树](https://github.com/daviscai/get-node/blob/master/understand/algorithm_tree.md)
-    14. [理解算法与数据结构 - 二叉树遍历（先序，中序，后序）]
+    14. [理解算法与数据结构 - 二叉树遍历（先序，中序，后序）](https://github.com/daviscai/get-node/blob/master/understand/algorithm_tree_search.md)
     15. [理解算法与数据结构 - 图与遍历（广度优先搜索，深度优先搜索）]
     16. [理解算法与数据结构 - 冒泡排序算法]
     17. [理解算法与数据结构 - 选择排序算法]

@@ -203,7 +203,7 @@ AVL树实现抽象数据类型Map就像一个普通的二叉搜索树，唯一�
 
 ```
 balanceFactor=height(leftSubTree)−height(rightSubTree)
-节点的平衡因子 = 左子数的高度 - 右子数的高度
+节点的平衡因子 = 左子树的高度 - 右子树的高度
 ```
 
 利用以上对平衡因子的定义，如果平衡因子大于零，我们称子树“左重”(left-heavy)。如果平衡因子小于零，那么子树“右重”(right-heavy)。如果平衡因子为零，则树（子树）是完全平衡的。
@@ -214,9 +214,9 @@ balanceFactor=height(leftSubTree)−height(rightSubTree)
 
 ##### 平衡因子怎么算的？
 
-以上图为例， 根据定义 `节点的平衡因子 = 左子数的高度 - 右子数的高度` ，首先上图的根节点的平衡因子-2 = 1 （左子数的高度） - 3 （右子数的高度），
+以上图为例， 根据定义 `节点的平衡因子 = 左子树的高度 - 右子树的高度` ，首先上图的根节点的平衡因子-2 = 1 （左子树的高度） - 3 （右子树的高度），
 
-叶子节点的平衡因子都为0，因为没有左右子数。
+叶子节点的平衡因子都为0，因为没有左右子树。
 
 根节点的右子节点平衡因子-1 = 1 - 2 ， 而它的右子节点的平衡因子 -1 = 0 - 1；
 
@@ -224,7 +224,7 @@ balanceFactor=height(leftSubTree)−height(rightSubTree)
 
 也就是`在任何时候我们的AVL树的高度等于树中节点数以2为底的对数的常数（1.44）倍。这对我们搜索AVL树来说是好消息因为它限制了搜索的复杂度到O(logN)。`
 
-那么，有了算法，我们就可以对不平衡数进行平衡化处理。
+那么，有了算法，我们就可以对不平衡树进行平衡化处理。
 
 ##### 自平衡二叉搜索树AVL实现原理
 
@@ -246,7 +246,7 @@ function Tree(){
     }
 
     /**
-     *  第3个数指 left || right 用于辨别 左边不平衡还是右边不平衡
+     *  left || right 用于辨别 左边不平衡还是右边不平衡
      */
     var insertNode = function (node,newDode,direction){
         if( newDode.key < node.key ){
@@ -269,7 +269,7 @@ function Tree(){
                 var left = direction || 'left';
                 insertNode(node.left,newDode,left);
             }
-        }else{ 
+        }else{
             if( node.right == null ){
                 // 添加
                 node.right = newDode;
@@ -496,7 +496,7 @@ left Tree -- 4 层  right Tree -- 4层
 延伸阅读  
 https://segmentfault.com/a/1190000006123188  
 
-### 红黑树
+### 红黑树(Red-Black Tree )
 
 红黑树，本质上来说就是一棵二叉查找树，但它在二叉查找树的基础上增加了着色和相关的性质使得红黑树相对平衡，从而保证了红黑树的查找、插入、删除的时间复杂度最坏为O(log n)。
 
@@ -519,3 +519,11 @@ https://segmentfault.com/a/1190000006123188
 延伸阅读  
 https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md  
 https://segmentfault.com/a/1190000008619190
+
+
+### AVL树和红黑树比较
+1. 如果插入一个node引起了树的不平衡，AVL和RB-Tree都是最多只需要2次旋转操作，即两者都是O(1)；但是在删除node引起树的不平衡时，最坏情况下，AVL需要维护从被删node到root这条路径上所有node的平衡性，因此需要旋转的量级O(logN)，而RB-Tree最多只需3次旋转，只需要O(1)的复杂度。
+
+2. AVL的结构相较RB-Tree来说更为平衡，在插入和删除node更容易引起Tree的unbalance，因此在大量数据需要插入或者删除时，AVL需要rebalance的频率会更高。因此，RB-Tree在需要大量插入和删除node的场景下，效率更高。自然，由于AVL高度平衡，因此AVL的search效率更高。
+
+可以看到它们最大的区别就是旋转操作的次数以及重新平衡的频率，红黑树在功能和性能上都比较稳定，更具有通用性，而AVL树搜索效率更高，更新性能较差，可以在特定场景下使用。
