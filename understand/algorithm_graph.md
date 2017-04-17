@@ -461,4 +461,160 @@ Bellman-Ford算法解决了边全值为负的单源最短路径问题。
 A*搜索算法解决了求仅一对顶点间的最短路径问题。  
 Floyd-Warshall算法解决了求所有顶点间的最短路径问题。  
 
-#### 深度优先搜索（BFS）
+如果感兴趣可以研究下，这里不作介绍。
+
+#### 深度优先搜索（DFS）
+
+深度优先搜索算法是从第一个顶点开始遍历图，沿着路径直到这条路径的最后一个顶点被访问，接着原路回退并探索下一条路径，简单地说，是先深度后广度的访问节点，如下图：  
+![](../imgs/dfs.jpeg)
+
+
+遍历步骤：
+1. 从图中某个顶点v出发，访问v；然后找到v的一个邻接顶点w ；
+2. 从w出发，深度优先搜索访问和w相邻接且未被访问的所有顶点；
+3. 重复第一步和第二步 ，直到和v相邻接的所有顶点都被访问为止；
+4. 继续选取图中未被访问顶点作为起始顶点，重复上面步骤，直到图中所有顶点都被访问为止。
+
+可以看出来，深度优先搜索的步骤是递归的，所以，我们可以用递归的方式来实现，而递归需要用到栈。
+
+下面是代码实现：
+
+```
+// 输出最短路径时候需要用到栈
+function Stack(){
+    var items = [];
+
+    //入栈
+    this.push = function(element){
+        items.push(element);
+    }
+
+    //出栈
+    this.pop = function(){
+        return items.pop();
+    }
+
+    // 查询栈顶元素
+    this.peek = function(){
+        return items[items.length -1];
+    }
+
+    // 判断栈是否为空
+    this.isEmpty = function(){
+        return items.length == 0;
+    }
+
+    //清空
+    this.clear = function(){
+        items = [];
+    }
+
+    //返回栈元素个数
+    this.size = function(){
+        return items.length;
+    }
+
+    this.echo = function(){
+        console.log(items.toString());
+    }
+}
+
+function Graph() {
+    var vertices = []; //存储图中所有的顶点名字
+    var adjList = new Map();//用ES6的Map来存储邻接表
+
+    this.addVertex = function(v){ //添加顶点
+        vertices.push(v);
+        adjList.set(v, []); //顶点为键，值为空数组
+    };
+
+    this.addEdge = function(v, w){ //添加边, v和w形参代表顶点
+        adjList.get(v).push(w); //基于有向图，v顶点指向w顶点
+        adjList.get(w).push(v); //基于无向图，w顶点指向v顶点
+    };
+
+    this.initializeColor = function(){
+      var color = [];
+      for (var i=0; i<vertices.length; i++){
+          color[vertices[i]] = 'white'; //初始化所有的顶点都是白色
+      }
+      return color;
+    };
+
+    //深度优先搜索
+    this.dfs = function(callback){
+        var color = this.initializeColor(); //前面的颜色数组
+        for (var i=0; i<vertices.length; i++){
+            if (color[vertices[i]] === 'white'){
+                this.dfsVisit(vertices[i], color, callback); //递归调用未被访问过的顶点
+            }
+        }
+    };
+
+    // 递归访问
+    this.dfsVisit = function(u, color, callback){
+        color[u] = 'grey';
+        if (callback) {
+            callback(u);
+        }
+        var neighbors = adjList.get(u); //邻接顶点
+        for (var i=0; i<neighbors.length; i++){
+            var w = neighbors[i];
+            if (color[w] === 'white'){
+                this.dfsVisit(w, color, callback); //添加顶点w入栈
+            }
+        }
+        color[u] = 'black';
+    }
+
+    this.toString = function(){
+        var s = '';
+        for (var i=0; i<vertices.length; i++){
+            s += vertices[i] + ' -> ';
+            var neighbors = adjList.get(vertices[i]);
+            for (var j=0; j<neighbors.length; j++){
+                s += neighbors[j] + ' ';
+            }
+            s += '\n';
+        }
+        return s;
+    };
+}  
+//测试
+var graph = new Graph();
+var myVertices = ['A','B','C','D','E','F','G','H','I'];
+for (var i=0; i<myVertices.length; i++){
+    graph.addVertex(myVertices[i]);
+}
+graph.addEdge('A', 'B');
+graph.addEdge('A', 'C');
+graph.addEdge('A', 'D');
+graph.addEdge('C', 'D');
+graph.addEdge('C', 'G');
+graph.addEdge('D', 'G');
+graph.addEdge('D', 'H');
+graph.addEdge('B', 'E');
+graph.addEdge('B', 'F');
+graph.addEdge('E', 'I');
+
+//测试如下：
+
+//测试如下：
+function printNode(value){
+    console.log('Visited vertex: ' + value);
+}
+graph.dfs(printNode);
+```
+
+输出：
+```
+Visited vertex: A
+Visited vertex: B
+Visited vertex: E
+Visited vertex: I
+Visited vertex: F
+Visited vertex: C
+Visited vertex: D
+Visited vertex: G
+Visited vertex: H
+```
