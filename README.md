@@ -4,15 +4,15 @@ node 全栈开发从入门到放弃系列文章
 ### Javascript 语言基础
 建议看 PPT，文档带有部分ppt特效语法，可能会影响阅读，ppt特效由 [nodeppt](https://github.com/daviscai/nodePPT) 提供支持。
 
-1. ES6 新特性基础： [PPT](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
+1. ES6 新特性基础：:heavy_check_mark: [PPT](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
 
-2. ES6 新特性高阶 [ppt todo]  
+2. ES6 新特性高阶 :heavy_check_mark: [ppt doing]  
 
-3. Javascript忍者秘籍 [ppt todo]
+3. Javascript忍者秘籍 :heavy_check_mark: [ppt todo]
 
-4. Javascript 数据结构与算法 [ppt todo]    
+4. Javascript 数据结构与算法 :heavy_check_mark: [ppt todo]    
 
-5. JavaScript设计模式
+5. JavaScript设计模式 [todo]  
 
 6. 你不知道的JavaScript (上，中) [todo]  
 
