@@ -1,5 +1,5 @@
 # get-node
-node 全栈开发从入门到放弃系列文章
+node 全栈开发从入门到放弃系列文章  :wink:  :guitar:  :sunglasses: :dog2:  :tired_face: :scream: :dart:
 
 ### Javascript 语言基础
 建议看 PPT，文档带有部分ppt特效语法，可能会影响阅读，ppt特效由 [nodeppt](https://github.com/daviscai/nodePPT) 提供支持。
@@ -8,15 +8,15 @@ node 全栈开发从入门到放弃系列文章
 
 2. ES6 新特性高阶 :heavy_check_mark: [ppt doing]  
 
-3. Javascript忍者秘籍 :heavy_check_mark: [ppt todo]
+3. Javascript忍者秘籍 :heavy_check_mark: [ppt todo]， 文档见理解系列
 
-4. Javascript 数据结构与算法 :heavy_check_mark: [ppt todo]    
+4. Javascript 数据结构与算法 :heavy_check_mark: [ppt todo]， 文档见理解系列 - 理解算法与数据结构
 
-5. JavaScript设计模式 [todo]  
+5. JavaScript语言精粹 :heavy_check_mark:
 
-6. 你不知道的JavaScript (上，中) [todo]  
+6. JavaScript设计模式 [ppt todo]
 
-7. JavaScript语言精粹 [todo]
+7. 你不知道的JavaScript (上，中) [todo]   
 
 8. 理解系列(原创，通过简单例子理解JS难点和重点)
     1. [理解 apply 和 call](https://github.com/daviscai/get-node/blob/master/understand/js_apply_call.md)
@@ -36,6 +36,15 @@ node 全栈开发从入门到放弃系列文章
     14. [理解算法与数据结构 - 二叉树遍历（先序，中序，后序）](https://github.com/daviscai/get-node/blob/master/understand/algorithm_tree_search.md)
     15. [理解算法与数据结构 - 图与遍历（广度优先搜索，深度优先搜索）](https://github.com/daviscai/get-node/blob/master/understand/algorithm_graph.md)
     16. [理解算法与数据结构 - 排序算法（冒泡，选择，插入，归并，快速）](https://github.com/daviscai/get-node/blob/master/understand/algorithm_sort.md)
+    17. [理解设计模式 - 单例模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_singleton.md)
+    18. [理解设计模式 - 观察者模式]
+    19. [理解设计模式 - 代理模式]
+    20. [理解设计模式 - 访问者模式]
+    21. [理解设计模式 - 策略模式]
+    22. [理解设计模式 - 简单工厂模式]
+    23. [理解设计模式 - 模版方法模式]
+    24. [理解设计模式 - 适配器模式]
+    25. [理解设计模式 - 设计原则（单一原则，开放-封闭原则，最少知识原则）]
 
 
 ### Node.js
@@ -53,6 +62,7 @@ node 全栈开发从入门到放弃系列文章
     3.4 千万级、亿级数据索引优化实践
 4. node应用可视化监控
 5. docker容器 & 微服务化
+6. Cassandra
 
 ### 表现层前端
 1. view层技术， react, vue2, antd, vux, weex
