@@ -10,7 +10,7 @@
 ```
 var getSingle = function(fn){
     var result;
-    return function (){  // 惰性函数 ，创建时不执行
+    return function (){  // 惰性函数 ，调用 getSingle()方法时不执行
 		console.log('result:'+result)
 		if(!result){
 			result = fn.apply(this,arguments);

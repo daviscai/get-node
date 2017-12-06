@@ -37,20 +37,23 @@ node 全栈开发从入门到放弃系列文章  :wink:  :guitar:  :sunglasses: 
     15. [理解算法与数据结构 - 图与遍历（广度优先搜索，深度优先搜索）](https://github.com/daviscai/get-node/blob/master/understand/algorithm_graph.md)
     16. [理解算法与数据结构 - 排序算法（冒泡，选择，插入，归并，快速）](https://github.com/daviscai/get-node/blob/master/understand/algorithm_sort.md)
     17. [理解设计模式 - 单例模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_singleton.md)
-    18. [理解设计模式 - 观察者模式]
-    19. [理解设计模式 - 代理模式]
-    20. [理解设计模式 - 访问者模式]
-    21. [理解设计模式 - 策略模式]
-    22. [理解设计模式 - 简单工厂模式]
-    23. [理解设计模式 - 模版方法模式]
-    24. [理解设计模式 - 适配器模式]
-    25. [理解设计模式 - 设计原则（单一原则，开放-封闭原则，最少知识原则）]
+    18. [理解设计模式 - 观察者模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_observer.md)
+    19. [理解设计模式 - 代理模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_proxy.md)
+    20. [理解设计模式 - 访问者模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_visitor.md)
+    21. [理解设计模式 - 策略模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_strategy.md)
+    22. [理解设计模式 - 简单工厂模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_simple_factory.md)
+    23. [理解设计模式 - 模版方法模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_template.md)
+    24. [理解设计模式 - 适配器模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_adapter.md)
+    25. [理解设计模式 - MVC/MVVM模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_mvx.md)
+    26. [理解设计模式 - 设计原则（单一原则，开放-封闭原则，最少知识原则）](https://github.com/daviscai/get-node/blob/master/understand/patterns_principles.md)
 
 
 ### Node.js
-1. V8 GC
-2. V8 性能调优
-3. node.js http和文件系统
+1. Node Api接口文档
+2. V8 GC
+3. V8 性能调优
+4. 浏览器内核分析与实现
+
 
 ### 系统架构与监控
 1. 分布式缓存实现
@@ -65,29 +68,24 @@ node 全栈开发从入门到放弃系列文章  :wink:  :guitar:  :sunglasses: 
 6. Cassandra
 
 ### 表现层前端
-1. view层技术， react, vue2, antd, vux, weex
-    1. vue技术栈： vue, vuex, vue-router, vux，element ui
-        1. 跑demo，撸一遍官方文档示例
-        2. 多个领域的开源项目，clone下来读源码，研究实现原理，并尝试做一个类似的app
-        3. fork一个比较出名的开源项目，参与其中，提pr
-        4. 做一个音乐app，记事本app，新闻app
-    2. react技术栈： react, react-router, redux, antd, react-native
-    3. angularjs 了解跑demo，熟悉开发流程即可
+1. view层技术， react, vue2
+    1. vue技术栈： vue, vuex, vue-router, element ui, muse-ui
+        1. 管理后台 - element ui + vue2 + vuex + vue-router
+        2. 简单的音乐app
+        3. 学习笔记App
+    2. react & react native
 
 2. css3 & 栅格系统
-3. html5 & 动画 & webGL
-4. 移动端混合app技术
+3. html5 & canvas动画 & webGL
+4. 移动端混合app技术, weex & react native
 
 ### 行业应用和实践
 1. node.js服务端开发框架 Kone
-2. 基于markdown的wiki
-3. 论坛
-4. CMS
-5. H5游戏
-6. 微信接口开发
-7. 移动端App开发
-8. PC桌面客户端开发
-9. 物联网应用开发
+2. 微信接口(oauth2 登录)
+3. 移动端App开发
+4. 桌面客户端建站助手
+5. 对接第三方服务（短信，app统计，直播，短视频，应用监控等），完整的企业服务
+6. 微信公众号和小程序开发
 
 
 ### 未来
