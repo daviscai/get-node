@@ -17,24 +17,24 @@ var Emitter = require('events').EventEmitter;
 
 var emitter = new Emitter();
 
-emitter.on('someEvent',function(stream){
+emitter.on('someEvent1',function(stream){
 
 console.log(stream + 'from eventHandler1');
 
 });
 
-emitter.on('someEvent',function(stream){
+emitter.on('someEvent2',function(stream){
 
 console.log(stream + 'from eventHandler2');
 
 });
 
-emitter.emit('someEvent','I am a stream!');
+emitter.emit('someEvent1','I am a stream!');
 ```
-emitter对象中的 emitter.on是指发布事件”someEvent”，而emitter.emit是指触发事件,事件名称为”someEvent”.从而执行回调函数.
+emitter对象中的 emitter.on是指发布事件”someEvent1”，而emitter.emit是指触发事件,事件名称为”someEvent1”.从而执行回调函数.
 
 
-参考EventEmitter对象的思路，我们来看看怎么写订阅/发布
+参考EventEmitter对象的思路，我们来看看怎么实现订阅/发布
 
 ```
 function PubSub() {
@@ -49,18 +49,20 @@ PubSub.prototype = {
         }
         self.handlers[eventType].push(handler);
         return this;
-       },
-       // 触发事件(发布事件)
-       emit: function(eventType){
-           var self = this;
-           var handlerArgs = Array.prototype.slice.call(arguments,1);
-           for(var i = 0; i < self.handlers[eventType].length; i++) {
-                 self.handlers[eventType][i].apply(self,handlerArgs);
-           }
-           return self;
-       }
-};// 调用方式如下：
+    },
+    
+    // 触发事件(发布事件)
+    emit: function(eventType){
+        var self = this;
+        var handlerArgs = Array.prototype.slice.call(arguments,1);
+        for(var i = 0; i < self.handlers[eventType].length; i++) {
+              self.handlers[eventType][i].apply(self,handlerArgs);
+        }
+        return self;
+    }
+};
 
+// 调用方式如下：
 var pubsub = new PubSub();
 
 pubsub.on('A',function(data){
