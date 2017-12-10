@@ -6,7 +6,7 @@ node 全栈开发从入门到放弃系列文章  :wink:  :guitar:  :sunglasses: 
 
 1. ES6 新特性基础：:heavy_check_mark: [PPT](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
 
-2. ES6 新特性高阶 :heavy_check_mark: [ppt doing]  
+2. ES6 新特性高阶 :heavy_check_mark: [PPT](https://daviscai.github.io/es_hl/)  
 
 3. Javascript忍者秘籍 :heavy_check_mark: [ppt todo]， 文档见理解系列
 
@@ -39,7 +39,7 @@ node 全栈开发从入门到放弃系列文章  :wink:  :guitar:  :sunglasses: 
     17. [理解设计模式 - 单例模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_singleton.md)
     18. [理解设计模式 - 观察者模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_observer.md)
     19. [理解设计模式 - 代理模式]
-    20. [理解设计模式 - 访问者模式]
+    20. [理解设计模式 - 访问者模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_visitor.md)
     21. [理解设计模式 - 策略模式]
     22. [理解设计模式 - 简单工厂模式]
     23. [理解设计模式 - 模版方法模式]
