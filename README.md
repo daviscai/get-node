@@ -6,7 +6,7 @@ node 全栈开发从入门到放弃系列文章  :wink:  :guitar:  :sunglasses: 
 
 1. ES6 新特性基础：:heavy_check_mark: [PPT](https://daviscai.github.io/es6_base/)， [文档](https://github.com/daviscai/get-node/blob/master/es6_base/es6.base.md)   
 
-2. ES6 新特性高阶 :heavy_check_mark: [ppt doing]  
+2. ES6 新特性高阶 :heavy_check_mark: [PPT](https://daviscai.github.io/es_hl/)  
 
 3. Javascript忍者秘籍 :heavy_check_mark: [ppt todo]， 文档见理解系列
 
