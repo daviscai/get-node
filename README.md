@@ -38,14 +38,14 @@ node 全栈开发从入门到放弃系列文章  :wink:  :guitar:  :sunglasses: 
     16. [理解算法与数据结构 - 排序算法（冒泡，选择，插入，归并，快速）](https://github.com/daviscai/get-node/blob/master/understand/algorithm_sort.md)
     17. [理解设计模式 - 单例模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_singleton.md)
     18. [理解设计模式 - 观察者模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_observer.md)
-    19. [理解设计模式 - 代理模式]
-    20. [理解设计模式 - 访问者模式]
-    21. [理解设计模式 - 策略模式]
-    22. [理解设计模式 - 简单工厂模式]
-    23. [理解设计模式 - 模版方法模式]
-    24. [理解设计模式 - 适配器模式]
-    25. [理解设计模式 - MVC/MVVM模式]
-    26. [理解设计模式 - 设计原则（单一原则，开放-封闭原则，最少知识原则）]
+    19. [理解设计模式 - 代理模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_proxy.md)
+    20. [理解设计模式 - 访问者模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_visitor.md)
+    21. [理解设计模式 - 策略模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_strategy.md)
+    22. [理解设计模式 - 简单工厂模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_simple_factory.md)
+    23. [理解设计模式 - 模版方法模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_template.md)
+    24. [理解设计模式 - 适配器模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_adapter.md)
+    25. [理解设计模式 - MVC/MVVM模式](https://github.com/daviscai/get-node/blob/master/understand/patterns_mvx.md)
+    26. [理解设计模式 - 设计原则（单一原则，开放-封闭原则，最少知识原则）](https://github.com/daviscai/get-node/blob/master/understand/patterns_principles.md)
 
 
 ### Node.js
